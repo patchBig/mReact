@@ -18,10 +18,17 @@ current -> alternate
 ```ts
 function commitRootImpl(
   root: FiberRoot, // FiberRoot
-) {
+i) {
   // finishedWork 即为 workInProgress 数的根节点
   // root.current 指向它来完成树的切换
   root.current = finishedWork;
   scheduler.requestPaint();
 }
 ```
+
+workLoop
+workInprogress / alternate / current 双缓冲
+Fiber 链表遍历
+requestIdleCallback / polyfill
+
+
